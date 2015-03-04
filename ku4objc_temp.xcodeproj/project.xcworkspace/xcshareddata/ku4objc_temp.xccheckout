@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7ACF6437-3F9F-4B24-8E08-901C94F9B534</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ku4objc_temp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2D311FEABE464153414EC515AE87FF076069C6BF</key>
+		<string>https://github.com/kodmunki/ku4objc_temp.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ku4objc_temp.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2D311FEABE464153414EC515AE87FF076069C6BF</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/kodmunki/ku4objc_temp.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2D311FEABE464153414EC515AE87FF076069C6BF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2D311FEABE464153414EC515AE87FF076069C6BF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ku4objc_temp</string>
+		</dict>
+	</array>
+</dict>
+</plist>

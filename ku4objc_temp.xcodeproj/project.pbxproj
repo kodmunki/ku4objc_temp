@@ -224,7 +224,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\nDEVICE_PATH=\"${OBJROOT}/UninstalledProducts/${TARGET_NAME}.framework\"\nSIMULATOR_PATH=\"${SYMROOT}/../../../../Products/Debug-iphonesimulator/${TARGET_NAME}.framework\"\nARCHIVE_PATH=\"${SRCROOT}/_Archive\"\nif [ \"${CONFIGURATION}\" = \"Release\" ]; then\nif [ -d \"${DEVICE_PATH}\" ]; then\nif [ -d \"${SIMULATOR_PATH}\" ]; then\nrm -rf \"${ARCHIVE_PATH}\"\nmkdir \"${ARCHIVE_PATH}\"\ncp -r \"${DEVICE_PATH}\" \"${ARCHIVE_PATH}\"\nlipo -create \"${DEVICE_PATH}/${TARGET_NAME}\" \"${SIMULATOR_PATH}/${TARGET_NAME}\" -output \"${ARCHIVE_PATH}/${TARGET_NAME}.framework/${TARGET_NAME}\"\nfi\nfi\nfi\nexit 0;";
+			shellScript = "set -e\n\nDEVICE_BIN=\"${OBJROOT}/UninstalledProducts/${TARGET_NAME}.framework\"\nSIMULATOR_BIN=\"${SYMROOT}/../../../../Products/Debug-iphonesimulator/${TARGET_NAME}.framework\"\n\nARCHIVE_PATH=\"${SRCROOT}/_Archive\"\nrm -rf \"${ARCHIVE_PATH}\"\nmkdir \"${ARCHIVE_PATH}\"\n\nif [ \"${CONFIGURATION}\" = \"Release\" ]; then\n\nif [ -d \"${DEVICE_BIN}\" ]; then\nDEVICE_PATH=\"${ARCHIVE_PATH}/Release\"\nmkdir \"${DEVICE_PATH}\"\ncp -r \"${DEVICE_BIN}\" \"${DEVICE_PATH}\"\n\nif [ -d \"${SIMULATOR_BIN}\" ]; then\nSIMULATOR_PATH=\"${ARCHIVE_PATH}/Debug\"\nmkdir \"${SIMULATOR_PATH}\"\ncp -r \"${DEVICE_BIN}\" \"${SIMULATOR_PATH}\"\nlipo -create \"${DEVICE_BIN}/${TARGET_NAME}\" \"${SIMULATOR_BIN}/${TARGET_NAME}\" -output \"${SIMULATOR_PATH}/${TARGET_NAME}.framework/${TARGET_NAME}\"\n\nfi\nfi\nfi\nexit 0;\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -420,6 +420,7 @@
 				58D1D4DC1A7E7367000C4BEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		58D1D4DD1A7E7367000C4BEC /* Build configuration list for PBXNativeTarget "ku4objc_tempTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +429,7 @@
 				58D1D4DF1A7E7367000C4BEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,6 @@
+framework module ku4objc_temp {
+  umbrella header "ku4objc_temp.h"
+
+  export *
+  module * { export * }
+}
