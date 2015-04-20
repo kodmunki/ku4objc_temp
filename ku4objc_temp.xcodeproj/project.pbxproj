@@ -131,7 +131,6 @@
 				58D1D4C01A7E7366000C4BEC /* Frameworks */,
 				58D1D4C11A7E7366000C4BEC /* Headers */,
 				58D1D4C21A7E7366000C4BEC /* Resources */,
-				58D1D4E01A7E73D6000C4BEC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -211,22 +210,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		58D1D4E01A7E73D6000C4BEC /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "set -e\n\nDEVICE_BIN=\"${OBJROOT}/UninstalledProducts/${TARGET_NAME}.framework\"\nSIMULATOR_BIN=\"${SYMROOT}/../../../../Products/Debug-iphonesimulator/${TARGET_NAME}.framework\"\n\nARCHIVE_PATH=\"${SRCROOT}/_Archive\"\nrm -rf \"${ARCHIVE_PATH}\"\nmkdir \"${ARCHIVE_PATH}\"\n\nif [ \"${CONFIGURATION}\" = \"Release\" ]; then\n\nif [ -d \"${DEVICE_BIN}\" ]; then\nDEVICE_PATH=\"${ARCHIVE_PATH}/Release\"\nmkdir \"${DEVICE_PATH}\"\ncp -r \"${DEVICE_BIN}\" \"${DEVICE_PATH}\"\n\nif [ -d \"${SIMULATOR_BIN}\" ]; then\nSIMULATOR_PATH=\"${ARCHIVE_PATH}/Debug\"\nmkdir \"${SIMULATOR_PATH}\"\ncp -r \"${DEVICE_BIN}\" \"${SIMULATOR_PATH}\"\nlipo -create \"${DEVICE_BIN}/${TARGET_NAME}\" \"${SIMULATOR_BIN}/${TARGET_NAME}\" -output \"${SIMULATOR_PATH}/${TARGET_NAME}.framework/${TARGET_NAME}\"\n\nfi\nfi\nfi\nexit 0;\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		58D1D4BF1A7E7366000C4BEC /* Sources */ = {
