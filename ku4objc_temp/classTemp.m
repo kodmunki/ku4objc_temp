@@ -10,16 +10,16 @@
 
 @implementation classTemp
 
+- (instancetype) init {
+    return [self initWithValue:YES];
+}
+
 - (instancetype) initWithValue:(BOOL)_value {
     self = [super init];
     if(self) {
         value = _value;
     }
     return self;
-}
-
-- (instancetype) init {
-    return [self initWithValue:YES];
 }
 
 - (BOOL) tempMethod
